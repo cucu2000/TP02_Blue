@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
+//Author: Kaleb
+
 class MainActivity : AppCompatActivity() {
     val homeFragment = HomeFragment()
     val schoolFragment = SchoolFragment()
@@ -44,19 +46,5 @@ class MainActivity : AppCompatActivity() {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, fragment)
         transaction.commit()
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.nav_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
-        }
-        checkMenuClick(item)
-
-        return super.onOptionsItemSelected(item)
     }
 }

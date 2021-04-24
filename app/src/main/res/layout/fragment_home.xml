@@ -7,6 +7,31 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
+    <TextView
+        android:id="@+id/txtViewOcu3"
+        android:layout_width="214dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="Phone:  (405) 208-5000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewInfo" />
+
+    <TextView
+        android:id="@+id/txtViewInfo"
+        android:layout_width="301dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="@string/string_info"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewOcu" />
+
     <ImageView
         android:id="@+id/imgOcu"
         android:layout_width="408dp"
@@ -21,10 +46,12 @@
         android:id="@+id/txtViewOcu"
         android:layout_width="214dp"
         android:layout_height="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
         android:text="Oklahoma City University"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgOcu" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
