@@ -38,6 +38,15 @@ class MajorDetail : AppCompatActivity() {
         recyclerView.layoutManager = layoutManager
 
 
+        if(TODO("Need Tristan to finish")){
+            (TODO("Need Tristan to finish\""))
+        }else if(TODO("Need Tristan to finish")){
+            TODO("Need Tristan to finish")
+        }else{
+            TODO("Need Tristan to finish")
+        }
+
+
     }
 
     fun createPeople(arrayList: ArrayList<Person>, Name: String, Position: String, Email: String, Room: String){

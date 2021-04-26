@@ -20,7 +20,7 @@ class majorAdapter(
     }
 
     override fun getItemCount(): Int {
-       return 1
+       return 3
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
