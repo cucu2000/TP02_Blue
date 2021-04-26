@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
 
+//Author: Milan
+
 class ClassActivity : AppCompatActivity() {
 
     var cSClasses: ArrayList<Classes> = ArrayList()
@@ -38,7 +40,7 @@ class ClassActivity : AppCompatActivity() {
     }
 
     fun createClasses(arrayList: ArrayList<Classes>, Name: String, ID: String) {
-        arrayList.add(Classes(arrayList, Name, ID))
+        arrayList.add(Classes(Name, ID))
     }
 
     fun createCSClasses() {

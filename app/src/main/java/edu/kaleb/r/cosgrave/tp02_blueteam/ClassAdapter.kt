@@ -6,6 +6,8 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
 
+//Author: Milan
+
 class ClassAdapter(var classes: ArrayList<Classes>, var mainActivity: MainActivity): RecyclerView.Adapter<ClassAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

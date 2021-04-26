@@ -1,4 +1,5 @@
 package edu.kaleb.r.cosgrave.tp02_blueteam.Models
+//Author: Milan
 
 data class Classes(var Name: String, var Id: String) {
 

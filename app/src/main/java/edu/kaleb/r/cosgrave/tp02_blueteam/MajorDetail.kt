@@ -64,13 +64,13 @@ class MajorDetail : AppCompatActivity() {
     }
 
     fun meindersPeople(){
-        createPeople(meindersPeople, "Seven Agee", "Dean, Proffessor of Economics", "sagee@okcu.edu", "Meinders 201")
+        createPeople(meindersPeople, "Seven Agee", "Dean, Professor of Economics", "sagee@okcu.edu", "Meinders 201")
         createPeople(meindersPeople, "Randy Murray", "Professor of Accounting", "rmurray@okcu.edu", "Meinders 120")
     }
 
     fun annLacyPeople(){
         createPeople(annLacyPeople, "Jo Rowan", "Dance Chair", "jrowan@okcu.edu", "Ann Lacy 201")
-        createPeople(annLacyPeople, "Jessica Telfer", "Proffesor of Arts Management", "jtelfer@okcu.edu", "Ann Lacy 120")
+        createPeople(annLacyPeople, "Jessica Telfer", "Professor of Arts Management", "jtelfer@okcu.edu", "Ann Lacy 120")
         createPeople(annLacyPeople, "Mellanie Shelley", "Associate Dean, Entertainment Business Economic Advisor", "mshelley@okcu.edu", "Ann Lacy 101")
     }
 
