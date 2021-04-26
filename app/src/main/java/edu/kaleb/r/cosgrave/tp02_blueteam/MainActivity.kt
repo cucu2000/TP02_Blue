@@ -2,19 +2,16 @@ package edu.kaleb.r.cosgrave.tp02_blueteam
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.navigation.NavigationView
 
 //Author: Kaleb
 
 class MainActivity : AppCompatActivity() {
     val homeFragment = HomeFragment()
-    val schoolFragment = SchoolFragment()
+    val schoolFragment = SchoolDetails()
     lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {

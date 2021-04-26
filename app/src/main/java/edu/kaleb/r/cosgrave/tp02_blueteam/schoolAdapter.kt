@@ -10,8 +10,7 @@ import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Schools
 //author: Tristan
 
 class schoolAdapter (
-    var schools: ArrayList<Schools>,
-    var mainActivity: MainActivity
+    var schools: ArrayList<Schools>
 ): RecyclerView.Adapter<schoolAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -20,13 +19,17 @@ class schoolAdapter (
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return schools.size
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): schoolAdapter.ViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.activity_school, parent, false)
-        return schoolAdapter.ViewHolder(view)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val layoutInflater = LayoutInflater.from(parent.context)
+        val cellForRow = layoutInflater.inflate(R.layout.fragment_school, parent, false)
+        return ViewHolder(cellForRow)
+    }
+
+    class CustomViewHolder(val view: View): RecyclerView.ViewHolder(view) {
+
     }
 
     override fun onBindViewHolder(holder: schoolAdapter.ViewHolder, position: Int) {

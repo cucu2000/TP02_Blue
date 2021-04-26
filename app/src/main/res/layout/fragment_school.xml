@@ -5,10 +5,10 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SchoolFragment">
+    tools:context=".SchoolDetails">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/schoolRecycleView"
+        android:id="@+id/schoolRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="202dp"
