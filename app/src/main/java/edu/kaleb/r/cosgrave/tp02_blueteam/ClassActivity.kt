@@ -38,7 +38,7 @@ class ClassActivity : AppCompatActivity() {
     }
 
     fun createClasses(arrayList: ArrayList<Classes>, Name: String, ID: String) {
-        arrayList.add(Classes(arrayList, Name, ID))
+        arrayList.add(Classes(Name, ID))
     }
 
     fun createCSClasses() {

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TP02_BlueTeam">
-        <activity android:name=".ClassesDetails"></activity>
+        <activity android:name=".school"></activity>
+        <activity android:name=".ClassesDetails" />
         <activity android:name=".ClassActivity" />
         <activity android:name=".Majors" />
         <activity android:name=".MajorDetail" />
