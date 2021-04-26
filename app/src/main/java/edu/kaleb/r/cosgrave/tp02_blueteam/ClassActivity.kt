@@ -2,9 +2,13 @@ package edu.kaleb.r.cosgrave.tp02_blueteam
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import edu.kaleb.r.cosgrave.tp02_blueteam.Adapters.ClassAdapter
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
 
 //Author: Milan
+//Intent Methods by Kaleb
 
 class ClassActivity : AppCompatActivity() {
 
@@ -20,6 +24,9 @@ class ClassActivity : AppCompatActivity() {
     var dMClasses: ArrayList<Classes> = ArrayList()
     var bEClasses: ArrayList<Classes> = ArrayList()
 
+    lateinit var Test: String
+    lateinit var layoutManager: RecyclerView.LayoutManager
+    lateinit var adapter: RecyclerView.Adapter<ClassAdapter.ViewHolder>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,6 +44,15 @@ class ClassActivity : AppCompatActivity() {
         createdMClasses()
         createbEClasses()
 
+        Test = intent.getStringExtra("Major").toString()
+
+        layoutManager = LinearLayoutManager(this)
+        var recyclerView = findViewById<RecyclerView>(R.id.classRecyclerView)
+        recyclerView.layoutManager = layoutManager
+
+        findMajor(Test)
+
+        recyclerView.adapter = adapter
     }
 
     fun createClasses(arrayList: ArrayList<Classes>, Name: String, ID: String) {
@@ -88,6 +104,37 @@ class ClassActivity : AppCompatActivity() {
     fun createbEClasses() {
         createClasses(bEClasses, "Accounting and Finance", "BE1001")
         createClasses(bEClasses, "International Marketing", "BE2002")
+    }
+
+    fun findMajor(Test: String){
+        if (Test.equals("Computer Science")){
+            adapter = ClassAdapter(cSClasses, this)
+
+        }else if (Test.equals("Game Design and Animation")){
+            adapter = ClassAdapter(gDClasses, this)
+
+        }else if (Test.equals("Biology")){
+            adapter = ClassAdapter(bIClasses, this)
+
+        }else if (Test.equals("Business Administration")){
+            adapter = ClassAdapter(bAClasses, this)
+
+        }else if (Test.equals("Economics")){
+            adapter = ClassAdapter(cEClasses, this)
+
+        }else if (Test.equals("Accounting")){
+            adapter = ClassAdapter(aCClasses, this)
+
+        }else if (Test.equals("Dance Performance")) {
+            adapter = ClassAdapter(dPClasses, this)
+
+        }else if (Test.equals("Dance Management")) {
+            adapter = ClassAdapter(dMClasses, this)
+
+        }else{
+            adapter = ClassAdapter(bEClasses, this)
+
+        }
     }
 }
 

@@ -1,15 +1,17 @@
 package edu.kaleb.r.cosgrave.tp02_blueteam
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import edu.kaleb.r.cosgrave.tp02_blueteam.Adapters.MajorAdapter
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Major
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Person
 
 //Author: Kaleb
 
-class MajorDetail : AppCompatActivity() {
+class MajorDetail : AppCompatActivity(), OnClickListener {
     var sarkeyMajors: ArrayList<Major> = ArrayList()
     var meindersMajors: ArrayList<Major> = ArrayList()
     var annLacyMajors: ArrayList<Major> = ArrayList()
@@ -17,12 +19,14 @@ class MajorDetail : AppCompatActivity() {
     var meindersPeople: ArrayList<Person> = ArrayList()
     var annLacyPeople: ArrayList<Person> = ArrayList()
 
+    lateinit var Test: String
     lateinit var layoutManager: RecyclerView.LayoutManager
-    lateinit var adapter: RecyclerView.Adapter<majorAdapter.ViewHolder>
+    lateinit var adapter: RecyclerView.Adapter<MajorAdapter.ViewHolder>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_major_detail)
+        Test = intent.getStringExtra("School").toString()
 
         sarkeyPeople()
         sarkeyMajors()
@@ -34,19 +38,17 @@ class MajorDetail : AppCompatActivity() {
         annLacyMajors()
 
         layoutManager = LinearLayoutManager(this)
-        var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        var recyclerView = findViewById<RecyclerView>(R.id.majorRecyclerView)
         recyclerView.layoutManager = layoutManager
 
-
-        if(TODO("Need Tristan to finish")){
-            (TODO("Need Tristan to finish\""))
-        }else if(TODO("Need Tristan to finish")){
-            TODO("Need Tristan to finish")
+        adapter = if(Test.equals("Petree College of Arts and Sciences")){
+            MajorAdapter(sarkeyMajors, this)
+        }else if(Test.equals("Meinders School of Business")){
+            MajorAdapter(meindersMajors, this)
         }else{
-            TODO("Need Tristan to finish")
+            MajorAdapter(annLacyMajors, this)
         }
-
-
+        recyclerView.adapter = adapter
     }
 
     fun createPeople(arrayList: ArrayList<Person>, Name: String, Position: String, Email: String, Room: String){
@@ -90,5 +92,11 @@ class MajorDetail : AppCompatActivity() {
         createMajor(annLacyMajors, "Dance Performance", annLacyPeople[0])
         createMajor(annLacyMajors, "Dance Management", annLacyPeople[1])
         createMajor(annLacyMajors, "Entertainment Business", annLacyPeople[2])
+    }
+
+    override fun onMajorClick(data: Major) {
+        val activityIntent = Intent(this, ClassActivity::class.java)
+        activityIntent.putExtra("Major", "${data.majorName}")
+        startActivity(activityIntent)
     }
 }

@@ -1,14 +1,17 @@
-package edu.kaleb.r.cosgrave.tp02_blueteam
+package edu.kaleb.r.cosgrave.tp02_blueteam.Adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import edu.kaleb.r.cosgrave.tp02_blueteam.ClassActivity
+import edu.kaleb.r.cosgrave.tp02_blueteam.MainActivity
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
+import edu.kaleb.r.cosgrave.tp02_blueteam.R
 
 //Author: Milan
 
-class ClassAdapter(var classes: ArrayList<Classes>, var mainActivity: MainActivity): RecyclerView.Adapter<ClassAdapter.ViewHolder>() {
+class ClassAdapter(var classes: ArrayList<Classes>, var classActivity: ClassActivity): RecyclerView.Adapter<ClassAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var txtName: TextView = itemView.findViewById(R.id.TextViewName)

@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/textViewHead"
-        android:layout_width="169dp"
-        android:layout_height="147dp"
+        android:layout_width="239dp"
+        android:layout_height="145dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:gravity="center|left"
@@ -21,8 +21,8 @@
 
     <TextView
         android:id="@+id/textViewMajor"
-        android:layout_width="178dp"
-        android:layout_height="42dp"
+        android:layout_width="252dp"
+        android:layout_height="52dp"
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Major"

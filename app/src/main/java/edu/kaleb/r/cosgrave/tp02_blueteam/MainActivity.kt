@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     val homeFragment = HomeFragment()
-    val schoolFragment = SchoolDetails()
+    val schoolFragment = SchoolFragment()
     lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
