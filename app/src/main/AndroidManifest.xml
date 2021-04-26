@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TP02_BlueTeam">
-        <activity android:name=".Majors"></activity>
+        <activity android:name=".ClassesDetails"></activity>
+        <activity android:name=".ClassActivity" />
+        <activity android:name=".Majors" />
         <activity android:name=".MajorDetail" />
         <activity android:name=".MainActivity">
             <intent-filter>
