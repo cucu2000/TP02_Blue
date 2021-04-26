@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
 
+//Author: Milan
+
 class ClassActivity : AppCompatActivity() {
 
     var cSClasses: ArrayList<Classes> = ArrayList()
