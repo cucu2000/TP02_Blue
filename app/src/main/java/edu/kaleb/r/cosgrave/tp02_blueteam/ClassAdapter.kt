@@ -22,7 +22,7 @@ class ClassAdapter(var classes: ArrayList<Classes>, var mainActivity: MainActivi
     }
 
     override fun getItemCount(): Int {
-        return 2
+        return classes.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
