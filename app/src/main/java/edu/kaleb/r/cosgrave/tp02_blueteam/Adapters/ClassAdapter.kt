@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import edu.kaleb.r.cosgrave.tp02_blueteam.ClassActivity
-import edu.kaleb.r.cosgrave.tp02_blueteam.MainActivity
 import edu.kaleb.r.cosgrave.tp02_blueteam.Models.Classes
 import edu.kaleb.r.cosgrave.tp02_blueteam.R
 
@@ -16,7 +15,7 @@ class ClassAdapter(var classes: ArrayList<Classes>, var classActivity: ClassActi
 
     //Create ViewHolder
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var txtName: TextView = itemView.findViewById(R.id.TextViewName)
+        var txtName: TextView = itemView.findViewById(R.id.textViewClassName)
         var txtId: TextView = itemView.findViewById(R.id.TextViewId)
 
     }

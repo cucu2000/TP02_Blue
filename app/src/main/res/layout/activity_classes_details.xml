@@ -19,10 +19,10 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TextViewName" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewClassName" />
 
     <TextView
-        android:id="@+id/TextViewName"
+        android:id="@+id/textViewClassName"
         android:layout_width="221dp"
         android:layout_height="93dp"
         android:layout_marginStart="48dp"
@@ -32,6 +32,8 @@
         android:layout_marginRight="143dp"
         android:gravity="center"
         android:text="TextView"
+        android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
