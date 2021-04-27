@@ -8,13 +8,14 @@
 
     <TextView
         android:id="@+id/textViewHead"
-        android:layout_width="239dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="337dp"
+        android:layout_height="99dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginLeft="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginRight="37dp"
         android:gravity="center|left"
         android:text="Head"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMajor" />
@@ -28,6 +29,7 @@
         android:text="Major"
         android:textColor="#000000"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textViewHead"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
