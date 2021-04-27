@@ -14,25 +14,31 @@ import edu.kaleb.r.cosgrave.tp02_blueteam.R
 
 //Author: Kaleb
 
+//Create Class with Inputs Needed to Create View
 class MajorAdapter(
     var majors: ArrayList<Major>,
     var majorActivity: MajorDetail
 ): RecyclerView.Adapter<MajorAdapter.ViewHolder>() {
 
+//Create ViewHolder
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var txtMajor: TextView = itemView.findViewById(R.id.textViewMajor)
         var txtHead: TextView = itemView.findViewById(R.id.textViewHead)
     }
 
+    //implement RecyclerView Methods
+    //Return # of Rows
     override fun getItemCount(): Int {
        return majors.size
     }
 
+    //Set the Layour for the View
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_majors, parent, false)
         return ViewHolder(view)
     }
 
+    //Assign Text Views their Values
     @RequiresApi(Build.VERSION_CODES.KITKAT)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.txtMajor.text = "${majors[position].majorName}"

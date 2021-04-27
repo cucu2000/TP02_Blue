@@ -10,19 +10,23 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //Author: Kaleb
 
 class MainActivity : AppCompatActivity() {
+
+    //Initialize Variables
     val homeFragment = HomeFragment()
     val schoolFragment = SchoolFragment()
-    lateinit var toggle: ActionBarDrawerToggle
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Setup Bottom Nav
         setupBottomNav()
 
+        //Load Home Fragment to Start
         loadFragment(homeFragment)
     }
 
+    //Setups Bottom Nav bar
     private fun setupBottomNav() {
         var bottomNav = findViewById<BottomNavigationView>(R.id.nav_bottom)
 
@@ -32,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Checks for Item Clicked in the Nav Bar
     private fun checkMenuClick(item: MenuItem) {
         when (item.itemId) {
             R.id.nav_home -> loadFragment(homeFragment)
@@ -39,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    //Loads a Fragment
     private fun loadFragment(fragment: Fragment) {
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame_layout, fragment)
